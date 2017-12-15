@@ -12,9 +12,9 @@
 <%
 	ArrayList<Filme> listaFilmes = null; 
 
-	if( request.getAttribute("atores") == null){ %>
+	if( request.getAttribute("filmes") == null){ %>
 	
-	<meta http-equiv="Refresh" content="1; url=http://localhost:8080/TEDB-Trab2/ListaFilmes">
+	<meta http-equiv="Refresh" content="1; url=http://localhost:8080/TEBD-Trab2/ListarFilmes">
 	
 	<% }
 	else {
@@ -29,7 +29,7 @@
 	<h1>Filmes</h1>
 	<ul>
 		<%
-		if(request.getAttribute("atores") != null){
+		if(request.getAttribute("filmes") != null){
 			ArrayList<String> generos;
 			ArrayList<String> premios;
 			ArrayList<String> atores;
@@ -43,16 +43,16 @@
 			<table>
 				<tr>
 					<td>
-						<div> <%= filme.getTitulo() %> </div>
-						<div> <%= filme.getAno() %></div>
-						<div> <%= filme.getNomeDiretor() %></div>
-						<div> <%= filme.getLocalFilmagem() %></div>
+						<div> <%=filme.getTitulo()%> </div>
+						<div> <%=filme.getAno()%></div>
+						<div> <%=filme.getNomeDiretor()%></div>
+						<div> <%=filme.getLocalFilmagem()%></div>
 						<div>
 				<%		
 				if(!generos.isEmpty()){
 					for (String genero : generos){
 				%>
-						<%= genero %>; 
+						<%=genero%>; 
 				<%
 					}
 				}
@@ -63,7 +63,7 @@
 				if(!premios.isEmpty()){
 					for (String premio : premios){
 				%>
-						<%= premio %>; 
+						<%=premio%>; 
 				<%
 					}
 				}
@@ -79,7 +79,7 @@
 				if(!atores.isEmpty()){
 					for (String ator : atores){
 				%>
-						<a href="InfoAtor?nome=<%=ator%>"> <%= ator %> </a>; 
+						<a href="InfoAtor?nome=<%=ator%>"> <%=ator%> </a>; 
 				<%
 					}
 				}
@@ -90,7 +90,6 @@
 				</tr>
 			</table>
 		</li>
-		<hr />
 		<%
 			}
 		}

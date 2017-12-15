@@ -32,9 +32,9 @@ public class ListarFilmes extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try{
 			ListaFilmes filmes = new ListaFilmes();
-			ArrayList<Filme> listaFilmes = filmes.getListaFilmes();
+			ArrayList<Filme> filmesLista = filmes.getListaFilmes();
 	
-			request.setAttribute("filmes", listaFilmes);
+			request.setAttribute("filmes", filmesLista);
 			
 			getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
 	

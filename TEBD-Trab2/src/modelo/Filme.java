@@ -11,6 +11,7 @@ public class Filme {
 	private ArrayList<String> genero;
 	private ArrayList<String> premios;
 	private ArrayList<String> atores;
+	
 
 	public Filme(String titulo, String ano, String nomeDiretor, String localFilmagem, ArrayList<String> genero, ArrayList<String> premios, ArrayList<String> atores){
 		this.titulo = titulo;
