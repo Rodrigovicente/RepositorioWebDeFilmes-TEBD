@@ -33,25 +33,24 @@
 	<h1>Informações do ator</h1>
 	<%
 	if(request.getAttribute("infoAtor") != null){
-		ArrayList<String> premios = ator.getPremios();
+		//ArrayList<String> premios = ator.getPremios();
 		
 	%>
 	<ul>
-		<li><%= ator.getNome() %></li>
-		<li><%= ator.getDataNasc() %></li>
-		<li><%= ator.getPaisOrigem() %></li>
-		<li><%= ator.getEndereco() %></li>
-		<li>
+		<li>Nome: <%= ator.getNome() %></li>
+		<li>Data de nascimento: <%= ator.getDataNasc() %></li>
+		<li>País de origem: <%= ator.getPaisOrigem() %></li>
+		<li>Endereço: <%= ator.getEndereco() %></li>
+		<li>Premio(s): <%= ator.getPremios() %></li>
 		<%						
-		if(!premios.isEmpty()){
+		/* if(premios != null){
+			out.println("<li>Premios: <ul>");
 			for (String premio : premios){
-		%>
-				<%= premio %>; 
-		<%
+				out.println("<li>" + premio + "</li>");
 			}
-		}
+			out.println("</ul></li>");
+		} */
 		%>
-		</li>
 	</ul>
 	<%
 	}

@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import modelo.AchaAtor;
 import modelo.Ator;
 import modelo.ListaFilmes;
 
@@ -32,11 +33,13 @@ public class InfoAtor extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try{
-			//Ator ator = new Ator("John Smith", "1982", "Madagascar", "Las Vegas");
-	
-			//request.setAttribute("infoAtor", ator);
+			String ator = request.getParameter("nome");
+			AchaAtor finder = new AchaAtor();
+			Ator atorAchado = finder.achaAtor(ator);
 			
-			getServletContext().getRequestDispatcher("/infoAtor.jsp").forward(request, response);
+			System.out.println("ator achado: " + atorAchado);
+			request.setAttribute("infoAtor", atorAchado);
+			getServletContext().getRequestDispatcher("/infoAtor.jsp").forward(request, response);;
 	
 		} catch (Exception e) {
 			// TODO: handle exception

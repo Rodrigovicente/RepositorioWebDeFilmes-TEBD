@@ -40,14 +40,11 @@
 				atores = filme.getAtores();
 		%>
 		<li>
-			<table>
-				<tr>
-					<td>
-						<div> <%=filme.getTitulo()%> </div>
-						<div> <%=filme.getAno()%></div>
-						<div> <%=filme.getNomeDiretor()%></div>
-						<div> <%=filme.getLocalFilmagem()%></div>
-						<div>
+			<div>Nome do Filme: <%=filme.getTitulo()%> </div>
+			<div>Ano: <%=filme.getAno()%></div>
+			<div>Diretor <%=filme.getNomeDiretor()%></div>
+			<div>Local de filmagem: <%=filme.getLocalFilmagem()%></div>
+			<div>Genero: 
 				<%		
 				if(!generos.isEmpty()){
 					for (String genero : generos){
@@ -57,8 +54,8 @@
 					}
 				}
 				%>
-						</div>
-						<div>
+			</div>
+			<div>Premios: 
 				<%						
 				if(!premios.isEmpty()){
 					for (String premio : premios){
@@ -68,28 +65,20 @@
 					}
 				}
 				%>
-						</div>
-						
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<div> 
+			</div>
+			<div>Atores:  
 				<%
 				if(!atores.isEmpty()){
 					for (String ator : atores){
 				%>
-						<a href="InfoAtor?nome=<%=ator%>"> <%=ator%> </a>; 
+			<a href="InfoAtor?nome=<%=ator%>"> <%=ator%> </a>; 
 				<%
 					}
 				}
 				%>
-						</div>
-						
-					</td>
-				</tr>
-			</table>
+			</div>
 		</li>
+		<hr />
 		<%
 			}
 		}

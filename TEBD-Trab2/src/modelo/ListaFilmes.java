@@ -178,7 +178,7 @@ public class ListaFilmes {
 				"PREFIX vcard:   <http://www.w3.org/2001/vcard-rdf/3.0#>"+
 					
 					"SELECT * WHERE{"+
-					"?actor vcard:FN ?x ."+
+					"?actor vcard:LABEL ?x ."+
 					"?movie vcard:hasRole ?actor ."+
 					"?movie vcard:TITLE ?y ."+
 					"FILTER(?y = \"" + filme + "\")"+

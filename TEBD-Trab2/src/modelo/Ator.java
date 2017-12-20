@@ -8,10 +8,10 @@ public class Ator {
 	private String dataNasc;
 	private String paisOrigem;
 	private String endereco;
-	private ArrayList<String> premios;
+	private String premios;
 	
 	
-	public Ator(String nome, String dataNasc, String paisOrigem, String endereco, ArrayList<String> premios) {
+	public Ator(String nome, String dataNasc, String paisOrigem, String endereco, String premios) {
 		this.nome = nome;
 		this.dataNasc = dataNasc;
 		this.paisOrigem = paisOrigem;
@@ -52,10 +52,10 @@ public class Ator {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
-	public ArrayList<String> getPremios() {
+	public String getPremios() {
 		return premios;
 	}
-	public void setPremios(ArrayList<String> premios) {
+	public void setPremios(String premios) {
 		this.premios = premios;
 	}
 	

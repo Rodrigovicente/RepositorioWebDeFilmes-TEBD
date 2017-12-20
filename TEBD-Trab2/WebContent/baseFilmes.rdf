@@ -3,8 +3,8 @@
     xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
   <rdf:Description rdf:about="http://somewhere/The_Lord_Of_The_Rings_The_Fellowship_Of_The_Ring">
   	<vcard:hasRole rdf:parseType="Resource">
-	  	<vcard:FN>Elijah Wood</vcard:FN>
-	  	<vcard:FN>Ian McKellen</vcard:FN>
+	  	<vcard:LABEL>Elijah Wood</vcard:LABEL>
+	  	<vcard:LABEL>Ian McKellen</vcard:LABEL>
 	 </vcard:hasRole>
     <vcard:CATEGORIES rdf:parseType="Resource">
     	<vcard:LABEL>Best Picture</vcard:LABEL>
@@ -24,8 +24,8 @@
   
   <rdf:Description rdf:about="http://somewhere/Kick_Ass">
   	<vcard:hasRole rdf:parseType="Resource">
-  		<vcard:FN>Aaron Taylor-Johnson</vcard:FN>
-  		<vcard:FN>Christopher Mintz-Plasse</vcard:FN>
+  		<vcard:LABEL>Aaron Taylor-Johnson</vcard:LABEL>
+  		<vcard:LABEL>Christopher Mintz-Plasse</vcard:LABEL>
   	</vcard:hasRole>
     <vcard:CATEGORIES rdf:parseType="Resource"></vcard:CATEGORIES>
     <vcard:hasGender rdf:parseType="Resource">
@@ -39,8 +39,8 @@
   
   <rdf:Description rdf:about="http://somewhere/The_Dark_Knight">
   	<vcard:hasRole rdf:parseType="Resource">
-	  	<vcard:FN>Heath Ledger</vcard:FN>
-	  	<vcard:FN>Christian Bale</vcard:FN>
+	  	<vcard:LABEL>Heath Ledger</vcard:LABEL>
+	  	<vcard:LABEL>Christian Bale</vcard:LABEL>
 	  </vcard:hasRole>
     <vcard:CATEGORIES rdf:parseType="Resource">
     	<vcard:LABEL>Best Achievement in Sound Editing</vcard:LABEL>
@@ -54,4 +54,22 @@
     <vcard:BDAY>2008</vcard:BDAY>
     <vcard:TITLE>The Dark Knight</vcard:TITLE>
   </rdf:Description>
+  
+  <rdf:Description rdf:about="http://somewhere/Mr_e_Mrs_Smith">
+  	<vcard:hasRole rdf:parseType="Resource">
+	  	<vcard:LABEL>William Bradley Pitt</vcard:LABEL>
+	  	<vcard:LABEL>Angelina Jolie</vcard:LABEL>
+	  </vcard:hasRole>
+    <vcard:CATEGORIES rdf:parseType="Resource">
+    	<vcard:LABEL>Best Adapted Screenplay</vcard:LABEL>
+    </vcard:CATEGORIES>
+    <vcard:hasGender rdf:parseType="Resource">
+	    <vcard:LABEL>Comedia Romantica</vcard:LABEL>
+	    <vcard:LABEL>Acao</vcard:LABEL>
+	</vcard:hasGender>
+    <vcard:FN>Doug Liman</vcard:FN>
+    <vcard:BDAY>2005</vcard:BDAY>
+    <vcard:TITLE>Mr. eMrs. Smith</vcard:TITLE>
+  </rdf:Description>
+  
 </rdf:RDF>
