@@ -16,7 +16,8 @@ import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.util.FileManager;
 
 public class AchaAtor {
-	static final String inputFileName  = "/home/aluno/java/TEBD-TrabFinal/WebContent/baseFilmes.rdf";
+	static final String inputFileName  = "C:/Users/rodri/workspace/TEBD-Trab2/WebContent/baseFilmes.rdf";
+	static final String atorBaseLocation = "http://localhost:3030/tebd-trab2/query";
 	
 	public static Ator achaAtor(String nomeCompleto){		
 		
@@ -59,7 +60,7 @@ public class AchaAtor {
 	    Query query = QueryFactory.create(sparql);
 //	    Query queryPremios = QueryFactory.create(sparqlPremios);
 	    
-	    QueryExecution qexec = QueryExecutionFactory.sparqlService("http://192.168.25.99:3030/atores/query", sparql);
+	    QueryExecution qexec = QueryExecutionFactory.sparqlService(atorBaseLocation, sparql);
 //	    QueryExecution qexecPremios = QueryExecutionFactory.sparqlService("http://localhost:3030/tebd-trab2/query", sparqlPremios);
 	    
 
@@ -100,12 +101,12 @@ public class AchaAtor {
 				
 				//Literal name8 = soln.getLiteral("filmes");
 				System.out.println("Nome: " + nome);
-				System.out.println("Prï¿½mios: " + premios);
-				System.out.println("Cï¿½njuge: " + conjuge);
+				System.out.println("Prêmios: " + premios);
+				System.out.println("Cônjuge: " + conjuge);
 				System.out.println("Filho: " + filho);
 				System.out.println("Data de Nascimento: " + nascimento);
 				System.out.println("Nacionalidade " + nacionalidade);
-				System.out.println("Endereï¿½o Atual: " + enderecoAtual);
+				System.out.println("Endereço Atual: " + enderecoAtual);
 				//System.out.println("Filmes: " + name8);
 				//System.out.println("\n");
 			}
